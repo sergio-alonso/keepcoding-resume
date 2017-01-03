@@ -1,0 +1,22 @@
+{
+  "name": "keepcoding-resume",
+  "version": "1.0.0",
+  "description": "Sergio Alonso resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergio-alonso/keepcoding-resume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "Sergio Alonso <sergio@sergioalonso.es>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sergio-alonso/keepcoding-resume/issues"
+  },
+  "homepage": "https://github.com/sergio-alonso/keepcoding-resume#readme"
+}
