@@ -19,7 +19,5 @@
     "url": "https://github.com/sergio-alonso/keepcoding-resume/issues"
   },
   "homepage": "https://github.com/sergio-alonso/keepcoding-resume#readme",
-  "dependencies": {
-    "markdown": "^0.5.0"
-  }
+  "dependencies": {}
 }
