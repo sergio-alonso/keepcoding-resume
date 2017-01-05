@@ -1,0 +1,36 @@
+{
+    "basics": {
+	"name": "Sergio Alonso",
+	"label": "Knowledge Worker",
+	"email": "sergio@sergioalonso.es",
+	"website": "www.sergioalonso.es",
+	"summary": "I will take care of your technological needs in a geek driven world. Always seeking for new knowledge to do the right things in the right way at the right time. My main goal is help you to design and build awesome solutions working together."
+    },
+    "work": [{
+	"company": "Altran España",
+	"position": "Software Engineer",
+	"website": "http://altran.es",
+	"startDate": "2010-04-01",
+	"summary": "Design software for the DPI (Deep Packet Inspection) technology provided by the Ericsson's Packet Core that is integrated by means of the SASN (Service Aware Support Node). As an Ericsson Research and Development software engineer team member I'm improving upon the existing complex legacy system within the Ericsson SACC (Service Aware Charging and Control) solution that identifies traffic carried over the network.",
+	"highlights": [
+	    "",
+	    "Implement features to evolve AAA protocols (Radius, Diameter) over 3GPP Packet Core interfaces (Gx, Gy, Gz, Rx).",
+	    "Expand node capabilities with propietary protocols such EBM (Event Based Monitoring).",
+	    "Catch up on the latest industry trends deploying SASN on Ericsson SSR (Smart Service Route) and SDN (Software Defined Network) service functions."
+	]
+    }],
+    "skills": [{
+	"name": "Software Engineer",
+	"keywords": [
+	    "GNU Linux",
+	    "GNU Toolchain",
+	    "SLES",
+	    "Bash",
+	    "Git",
+	    "C",
+	    "C++",
+	    "Perl",
+	    "Python"
+	]
+    }]
+}
