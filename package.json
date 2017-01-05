@@ -4,7 +4,8 @@
   "description": "Sergio Alonso resume",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "serve": "node node_modules/json-server/bin/index.js --watch resume.json"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sergio-alonso/keepcoding-resume/issues"
   },
-  "homepage": "https://github.com/sergio-alonso/keepcoding-resume#readme"
+  "homepage": "https://github.com/sergio-alonso/keepcoding-resume#readme",
+  "dependencies": {
+    "json-server": "^0.9.4"
+  }
 }
