@@ -4,7 +4,8 @@
   "description": "Sergio Alonso resume",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "serve": "node node_modules/json-server/bin/index.js --watch resume.json"
   },
   "repository": {
     "type": "git",
