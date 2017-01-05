@@ -1,2 +1,9 @@
 {
+    "basics": {
+	"name": "Sergio Alonso",
+	"label": "Knowledge Worker",
+	"email": "sergio@sergioalonso.es",
+	"website": "www.sergioalonso.es",
+	"summary": "I will take care of your technological needs in a geek driven world. Always seeking for new knowledge to do the right things in the right way at the right time. My main goal is help you to design and build awesome solutions working together."
+  }
 }
