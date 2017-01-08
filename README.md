@@ -1,5 +1,11 @@
 # Sergio Alonso resume
 
+To install dependencies after clone:
+
+```bash
+$ npm install --save
+```
+
 Inspired by the community driven open source iniciative [JSON Resume](https://jsonresume.org/) to create a [JSON](http://json.org/) based standard for resumes.
 
 My intention is to focus on the frontend technologies, so I'm going to mock the backend providing the data through an API, using [JSON Server](https://github.com/typicode/json-server) to create a mock REST API for quick prototyping my frontend.
