@@ -24,5 +24,7 @@ Now you can go to [http://localhost:3000/]() with your web browser.
 
 ## jQuery
 
+<img src="https://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg" width="100">
+
 ## See also
 * :npm: [npm - the package manager for JavaScript](https://www.npmjs.com)
