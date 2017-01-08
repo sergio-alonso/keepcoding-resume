@@ -7,5 +7,5 @@
 // The functions and methods therein allow us to load data from the server without a browser page refresh.
 //
 $(document).ready(function () {
-  // jQuery methods go here...
+  $("body").load("http://localhost:3000/db");
 });
