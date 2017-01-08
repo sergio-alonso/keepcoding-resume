@@ -30,3 +30,4 @@ Now you can go to [http://localhost:3000/]() with your web browser.
 
 ## See also
 * :npm: [npm - the package manager for JavaScript](https://www.npmjs.com)
+* :cdn: [Google Hosted Libraries](https://developers.google.com/speed/libraries/)
