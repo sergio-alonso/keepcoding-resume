@@ -24,6 +24,9 @@ Now you can go to [http://localhost:3000/]() with your web browser.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100">
 
+HTML5 semantic tags to hold content.
+Semantic markup from [Schema.org](http://schema.org/Person)
+
 ## CSS3
 
 ## JavaScript
