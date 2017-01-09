@@ -11,6 +11,8 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
     $("header h1").html(data.basics.name);
+    $("#aboutme h2").html(data.basics.label);
+    $("#aboutme h3").html(data.basics.summary);
     $("footer .email").html(data.basics.email);
     $("footer .website").html(data.basics.website);
   });
