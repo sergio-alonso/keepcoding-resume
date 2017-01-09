@@ -10,5 +10,8 @@ var url = "http://localhost:3000/db";
 $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
+    $("header h1").html(data.basics.name);
+    $("footer .email").html(data.basics.email);
+    $("footer .website").html(data.basics.website);
   });
 });
