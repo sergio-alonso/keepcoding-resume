@@ -7,6 +7,7 @@
 // The functions and methods therein allow us to load data from the server without a browser page refresh.
 //
 var url = "http://localhost:3000/db";
+var url_work = "http://localhost:3000/work";
 $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
@@ -15,5 +16,15 @@ $(document).ready(function () {
     $("#aboutme h3").html(data.basics.summary);
     $("footer .email").html(data.basics.email);
     $("footer .website").html(data.basics.website);
+  });
+  $.getJSON(url_work, function (data) {
+    $.each(data, function (i, item) {
+      var experience = $('<li/>', {
+        class: 'experience-item',
+        html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "'>" + item.company + "</a><br/>" + item
+          .summary
+      });
+      $("#experience-slider").html(experience);
+    });
   });
 });
