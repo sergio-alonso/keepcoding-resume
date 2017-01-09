@@ -2,13 +2,57 @@
 <html lang="en">
 
 <head>
-    <title>Sergio Alonso</title>
-    <meta charset="utf-8" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/resume-ajax.js"></script>
+  <title>Resume</title>
+  <meta charset="utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/resume-ajax.js"></script>
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/Person">
+  <header>
+    <h1 itemprop="name">Name</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#aboutme">About me</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#hireme">Hire me!</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="aboutme">
+      <h2></h2>
+      <h3></h3>
+    </section>
+    <section id="experience">
+      <header>
+        <h2>Experience</h2>
+      </header>
+      <ul id="experience-slider"></ul>
+    </section>
+    <section id="hireme">
+      <header>
+        <h2>Hire me!</h2>
+      </header>
+      <form>
+        <input type="text" name="name" placeholder="Full Name" />
+        <input type="textarea" name="project" placeholder="Brief project description" />
+        <input type="text" name="email" placeholder="name@example.com" />
+        <select>
+	  <option value="linkedin">Linkedin</option>
+	  <option value="google">Google</option>
+	  <option value="previous">Previous Work</option>
+	  <option value="reference">Shared Contact</option>
+	  <option value="others">Other way</option>
+	  </select>
+        <input type="submit" value="Hire me!" />
+      </form>
+    </section>
+  </main>
+  <footer>
+    <span class="email" itemprop="email"></span>
+    <span class="website" itemprop="url"></span>
+  </footer>
 </body>
 
 </html>

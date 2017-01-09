@@ -13,7 +13,7 @@ My intention is to focus on the frontend technologies, so I'm going to mock the 
 To run the server:
 
 ```bash
-$ npm run serve
+$ npm run server
 ```
 
 Now you can go to [http://localhost:3000/]() with your web browser.
@@ -23,6 +23,9 @@ Now you can go to [http://localhost:3000/]() with your web browser.
 [HTML5.1 W3C Recommendation, 1 November 2016](https://www.w3.org/TR/html51)
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100">
+
+HTML5 semantic tags to hold content.
+Semantic markup from [Schema.org](http://schema.org/Person)
 
 ## CSS3
 
