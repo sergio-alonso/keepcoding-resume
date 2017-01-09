@@ -13,7 +13,7 @@ My intention is to focus on the frontend technologies, so I'm going to mock the 
 To run the server:
 
 ```bash
-$ npm run serve
+$ npm run server
 ```
 
 Now you can go to [http://localhost:3000/]() with your web browser.
