@@ -1,0 +1,30 @@
+/*
+  Coolors Exported Palette
+  https://coolors.co/343434-343434-086f87-00a8e8-f9fcff
+
+   The color jet is a representation of the color of the mineraloid jet.
+   https://en.wikipedia.org/wiki/Shades_of_black#Jet
+
+   CSS Custom Properties for Cascading Variables.
+   https://www.w3.org/TR/css-variables-1/
+*/
+
+:root {
+  /* Jet */
+  --color-1: hsla(0, 0%, 20%, 1);
+  /* Metallic Seaweed */
+  --color-2: hsla(191, 89%, 28%, 1);
+  /* Vivid Cerulean */
+  --color-3: hsla(197, 100%, 45%, 1);
+  /* Ghost White */
+  --color-4: hsla(210, 100%, 99%, 1);
+}
+
+body {
+  color: var(--color-1);
+  background-color: var(--color-4);
+}
+
+a {
+  color: var(--color-2);
+}
