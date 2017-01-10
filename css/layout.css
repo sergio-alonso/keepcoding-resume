@@ -17,7 +17,9 @@ body {
   min-height: 100vh;
 }
 
-body header {}
+body header {
+  padding-top: 8em;
+}
 
 body main {
   display: flex;

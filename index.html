@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="css/typography.css" />
   <link rel="stylesheet" type="text/css" href="css/palette.css" />
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="css/grid.css" />
   <link rel="stylesheet" type="text/css" href="css/nav.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -20,8 +21,11 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/Person">
-  <header>
-    <h1 itemprop="name">Name</h1>
+  <header class="grid">
+    <div class="row">
+      <div class="column-2"></div>
+      <h1 class="column-3" itemprop="name"></h1>
+    </div>
   </header>
   <nav>
     <ul>
@@ -31,9 +35,15 @@
     </ul>
   </nav>
   <main>
-    <section id="aboutme">
-      <h2></h2>
-      <h3></h3>
+    <section id="aboutme" class="grid">
+      <div class="row">
+        <div class="column-2"></div>
+        <h2 class="column-3"></h2>
+      </div>
+      <div class="row">
+        <div class="column-6"></div>
+        <h3 class="column-4"></h3>
+      </div>
     </section>
     <section id="experience">
       <header>
