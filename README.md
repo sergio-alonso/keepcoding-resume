@@ -29,6 +29,12 @@ Semantic markup from [Schema.org](http://schema.org/Person)
 
 ## CSS3
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" width="100">
+
+Cascading Style Sheets, a simple mechanism for adding style to Web documents.
+
+[Cascading Style Sheets home page](https://www.w3.org/Style/CSS/)
+
 ## JavaScript
 
 ## jQuery

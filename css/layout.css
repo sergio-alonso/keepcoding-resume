@@ -1,0 +1,43 @@
+/*
+  CSS Flexible Box Layout.
+  https://www.w3.org/TR/css-flexbox-1/
+
+  A Complete Guide to Flexbox
+  -- Chris Coyier
+*/
+
+body {
+  /* Stops getting horizontal scrolling if anything overflows the width. */
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+body header {
+  padding-top: 8em;
+}
+
+body main {
+  display: flex;
+  flex-flow: column;
+}
+
+body main section {
+  height: 100vh;
+}
+
+body footer {
+  display: flex;
+  flex-flow: row;
+  min-height: 5%;
+  align-items: center;
+}
+
+body footer span {
+  flex-grow: 1;
+  text-align: center;
+}
