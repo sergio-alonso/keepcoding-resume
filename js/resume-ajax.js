@@ -24,7 +24,7 @@ $(document).ready(function () {
         html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "'>" + item.company + "</a><br/>" + item
           .summary
       });
-      $("#experience-slider").html(experience);
+      $("#experience-slider").append(experience);
     });
   });
 });
