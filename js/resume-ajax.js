@@ -20,11 +20,11 @@ $(document).ready(function () {
   $.getJSON(url_work, function (data) {
     $.each(data, function (i, item) {
       var experience = $('<li/>', {
-        class: 'experience-item',
+        class: 'slider-item',
         html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "'>" + item.company + "</a><br/>" + item
           .summary
       });
-      $("#experience-slider").append(experience);
+      $("#experience .slider-items").append(experience);
     });
   });
 });
