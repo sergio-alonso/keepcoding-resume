@@ -1,0 +1,19 @@
+body nav {
+  display: inline;
+  position: fixed;
+  top: 6em;
+  right: 4em;
+  z-index: 3;
+}
+
+body nav ul {
+  list-style-type: none;
+}
+
+body nav ul li {
+  display: inline;
+}
+
+body nav ul li a {
+  padding: 2em;
+}
