@@ -25,7 +25,7 @@ $(document).ready(function () {
           item
           .summary
       });
-      slider_items.append(experience);
+      slider_items.prepend(experience);
     });
     var slider = $('<div/>', { class: "slider-content", html: slider_items });
     $("#experience .slider").append(slider);
