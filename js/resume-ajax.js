@@ -29,5 +29,6 @@ $(document).ready(function () {
     });
     var slider = $('<div/>', { class: "slider-content", html: slider_items });
     $("#experience .slider").append(slider);
+    contentSlider.init();
   });
 });
