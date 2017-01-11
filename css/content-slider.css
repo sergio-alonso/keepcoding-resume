@@ -1,0 +1,51 @@
+/*
+  Content Slider
+*/
+
+.slider {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.slider .slider-content {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider .slider-content ul {
+  position: relative;
+}
+
+.slider .slider-content ul li {
+  float: left;
+}
+
+.slider button {
+  border: none;
+  background: transparent;
+  color: #000;
+  font-size: 40px;
+  text-align: center;
+  outline: none;
+  opacity: 0.5;
+  transition: opacity 300ms ease-out;
+}
+
+.slider button:hover {
+  opacity: 1;
+}
+
+.slider button.r {
+  float: right;
+}
+
+.slider button.l {
+  float: left;
+}
+
+.slider:after {
+  /* clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}

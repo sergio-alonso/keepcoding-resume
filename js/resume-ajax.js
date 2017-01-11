@@ -18,13 +18,17 @@ $(document).ready(function () {
     $("footer .website").html(data.basics.website);
   });
   $.getJSON(url_work, function (data) {
+    var slider_items = $('<ul/>');
     $.each(data, function (i, item) {
       var experience = $('<li/>', {
-        class: 'experience-item',
-        html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "'>" + item.company + "</a><br/>" + item
+        html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "'>" + item.company + "</a><br/>" +
+          item
           .summary
       });
-      $("#experience-slider").html(experience);
+      slider_items.prepend(experience);
     });
+    var slider = $('<div/>', { class: "slider-content", html: slider_items });
+    $("#experience .slider").append(slider);
+    contentSlider.init();
   });
 });
