@@ -4,11 +4,11 @@
 
 .slider {
   width: 75%;
-  /*  margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .slider .slider-content {
-  /*  overflow: hidden; */
+  overflow: hidden;
 }
 
 .slider .slider-content ul {
