@@ -46,5 +46,6 @@ Cascading Style Sheets, a simple mechanism for adding style to Web documents.
 ## See also
 * :npm: [npm - the package manager for JavaScript](https://www.npmjs.com)
 * :cdn: [Google Hosted Libraries](https://developers.google.com/speed/libraries/)
+* :cdnjs: [The best FOSS web front-end resource CDN](https://cdnjs.com/)
 * :http-server: [A simple zero-configuration command-line http server](https://github.com/indexzero/http-server)
 * :d3-timeline: [The d3-timeline-event-horizon library](https://github.com/cooperhewitt/d3-timeline-event-horizon)
