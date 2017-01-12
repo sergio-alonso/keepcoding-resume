@@ -43,4 +43,5 @@ $(document).ready(function () {
   $(window).resize(function () {
     tl.redraw();
   });
+  new skillsMap("skills-map", "resume-skills.json");
 });
