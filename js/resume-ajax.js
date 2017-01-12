@@ -18,6 +18,7 @@ $(document).ready(function () {
     $("footer .website").html(data.basics.website);
   });
   $.getJSON(url_work, function (data) {
+    var timelineData = [];
     var slider_items = $('<ul/>');
     $.each(data, function (i, item) {
       var experience = $('<li/>', {
@@ -26,9 +27,20 @@ $(document).ready(function () {
           .summary
       });
       slider_items.prepend(experience);
+      var start = new Date(item.startDate).getFullYear();
+      var end = new Date(item.endDate).getFullYear();
+      if (!end) {
+        end = new Date().getFullYear();
+      }
+      timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
     });
     var slider = $('<div/>', { class: "slider-content", html: slider_items });
     $("#experience .slider").append(slider);
     contentSlider.init();
+    var tl = new timeline("timeline", timelineData);
+    tl.draw();
+  });
+  $(window).resize(function () {
+    tl.redraw();
   });
 });
