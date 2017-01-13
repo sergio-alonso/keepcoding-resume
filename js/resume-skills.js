@@ -5,59 +5,51 @@
 // https://toddmotto.com/mastering-the-module-pattern/
 //
 var SkillsMap = (function () {
-  var margin = { top: 10, right: 10, bottom: 10, left: 10 };
-  var width = 650;
-  var height = 950;
-  var start_year = 2002;
-  var end_year = 2017;
-  var c = d3.scale.category20c();
+  var startYear = 2001;
+  var endYear = 2018;
+  var width = 600;
+  var height = 400;
+  var margin = { top: 100, right: 100, bottom: 10, left: 100 };
+  var gridSize = Math.floor(width / (endYear - startYear));
+  var xScale = d3.scale.linear()
+    .domain([startYear, endYear])
+    .range([0, width]);
+  var formatYears = d3.format("0000");
+  var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("top")
+    .tickFormat(formatYears);
+  var colorScale = d3.scale.linear()
+    .domain([1, 10])
+    .range(['lightblue', 'darkblue']);
   var _handleData = function (data) {
-    var x = d3.scale.linear().range([0, width]);
-    x.domain([start_year, end_year]);
-    var xAxis = d3.svg.axis().scale(x).orient("top");
-    var formatYears = d3.format("0000");
-    xAxis.tickFormat(formatYears);
-    svg.append("g").attr("class", "x axis")
-      .attr("transform", "translate(0,-" + 10 + ")")
+    svg.append("g").attr("class", "axis")
+      .attr("transform", "translate(" + (gridSize * 0.5) + "," + (gridSize * 0.2) + ")")
       .call(xAxis);
-    var xScale = d3.scale.linear()
-      .domain([start_year, end_year])
-      .range([0, width]);
-    for (var j = 0; j < data.length; j++) {
-      var g = svg.append("g").attr("class", "skill");
-      var circles = g.selectAll("circle")
-        .data(data[j]['skills'])
+    for (var i = 0; i < data.length; i++) {
+      var g = svg.append("g")
+        .attr("class", "skill")
+        .attr("transform", "translate(0," + (gridSize * 0.4) + ")");
+      var rects = g.selectAll("rect")
+        .data(data[i]['skills'])
         .enter()
-        .append("circle");
-      var rScale = d3.scale.linear()
-        .domain([0, d3.max(data[j]['skills'], function (d) { return d[1]; })])
-        .range([5, 9]);
-      circles
-        .attr("cx", function (d, i) { return xScale(d[0]); })
-        .attr("cy", j * 20 + 20)
-        .attr("r", function (d) { return rScale(d[1]); })
-        .style("fill", function (d) { return c(j); });
+        .append("rect")
+        .attr("x", function (d) { return xScale(d[0]); })
+        .attr("y", i * gridSize)
+        .attr("width", gridSize - (gridSize * 0.01))
+        .attr("height", gridSize - (gridSize * 0.01))
+        .style("fill", function (d) { return colorScale(d[1]); });
       g.append("text")
-        .attr("y", j * 20 + 25)
-        .attr("x", width + 20)
+        .attr("x", width + (gridSize * 1))
+        .attr("y", i * gridSize + (gridSize * 0.5))
         .attr("class", "label")
-        .text(_truncate(data[j]['name'], 30, "..."))
-        .style("fill", function (d) { return c(j); });
+        .text(data[i]['name']);
     }
-  };
-  var _truncate = function (str, maxLength, suffix) {
-    if (str.length > maxLength) {
-      str = str.substring(0, maxLength + 1);
-      str = str.substring(0, Math.min(str.length, str.lastIndexOf(" ")));
-      str = str + suffix;
-    }
-    return str;
   };
   var draw = function (id, json) {
     svg = d3.select(id).append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
-      .style("margin-left", margin.left + "px")
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     d3.json(json, _handleData);
@@ -66,6 +58,3 @@ var SkillsMap = (function () {
     draw: draw
   };
 })();
-//d3.json(this.json, function (data) {
-// 
-//    }
