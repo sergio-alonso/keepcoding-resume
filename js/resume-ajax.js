@@ -40,7 +40,8 @@ $(document).ready(function () {
     var tl = new timeline("timeline", timelineData);
     tl.draw();
   });
-  $(window).resize(function () {
-    tl.redraw();
-  });
+  //$(window).resize(function () {
+  //tl.redraw();
+  //});
+  SkillsMap.draw("#skills-map", "resume-skills.json");
 });
