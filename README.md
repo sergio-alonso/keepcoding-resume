@@ -50,3 +50,4 @@ Cascading Style Sheets, a simple mechanism for adding style to Web documents.
 * [A simple zero-configuration command-line http server](https://github.com/indexzero/http-server)
 * [D3.js is a JavaScript library for manipulating documents based on data](https://d3js.org/)
 * [The d3-timeline-event-horizon library](https://github.com/cooperhewitt/d3-timeline-event-horizon)
+* [A JavaScript module to create a calendar heatmap](http://cal-heatmap.com)
