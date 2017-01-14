@@ -6,6 +6,10 @@
   -- Chris Coyier
 */
 
+.debug {
+  border: 1px solid red;
+}
+
 body {
   /* Stops getting horizontal scrolling if anything overflows the width. */
   overflow-x: hidden;
