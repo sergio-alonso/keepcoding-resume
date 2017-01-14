@@ -7,7 +7,7 @@
 // The functions and methods therein allow us to load data from the server without a browser page refresh.
 //
 var url = "http://localhost:3000/db";
-var url_work = "http://localhost:3000/work";
+var urlWork = "http://localhost:3000/work";
 $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
@@ -25,9 +25,9 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  $.getJSON(url_work, function (data) {
+  $.getJSON(urlWork, function (data) {
     var timelineData = [];
-    var slider_items = $('<ul/>');
+    var sliderItems = $('<ul/>');
     $.each(data, function (i, item) {
       var experience = $('<li/>', {
         html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "' target='_blank'>" + item.company +
@@ -35,7 +35,7 @@ $(document).ready(function () {
           item
           .summary
       });
-      slider_items.prepend(experience);
+      sliderItems.prepend(experience);
       var start = new Date(item.startDate).getFullYear();
       var end = new Date(item.endDate).getFullYear();
       if (!end) {
@@ -43,7 +43,7 @@ $(document).ready(function () {
       }
       timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
     });
-    var slider = $('<div/>', { class: "slider-content", html: slider_items });
+    var slider = $('<div/>', { class: "slider-content", html: sliderItems });
     $("#experience .slider").append(slider);
     contentSlider.init();
     var tl = new timeline("timeline", timelineData);
