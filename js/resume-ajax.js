@@ -8,6 +8,20 @@
 //
 var url = "http://localhost:3000/db";
 var urlWork = "http://localhost:3000/work";
+//
+// Round to nearest year
+//
+// 1980-02 -> 1980
+// 1980-08 -> 1981
+//
+function roundYear(date) {
+  y = date.getFullYear();
+  m = date.getMonth();
+  if (6 < m) {
+    y++;
+  }
+  return y;
+}
 $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
@@ -29,18 +43,18 @@ $(document).ready(function () {
     var timelineData = [];
     var sliderItems = $('<ul/>');
     $.each(data, function (i, item) {
+      var start = roundYear(new Date(item.startDate));
+      var end = roundYear(new Date(item.endDate));
+      if (!end) {
+        end = new Date().getFullYear();
+      }
       var experience = $('<li/>', {
-        html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "' target='_blank'>" + item.company +
+        html: start + "-" + end + " " + item.position + " <a href='http://" + item.website + "' target='_blank'>" + item.company +
           "</a><br/>" +
           item
           .summary
       });
       sliderItems.prepend(experience);
-      var start = new Date(item.startDate).getFullYear();
-      var end = new Date(item.endDate).getFullYear();
-      if (!end) {
-        end = new Date().getFullYear();
-      }
       timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
     });
     var slider = $('<div/>', { class: "slider-content", html: sliderItems });
