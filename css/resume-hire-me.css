@@ -14,5 +14,6 @@ button {
 }
 
 textarea {
+  height: 200px;
   vertical-align: top;
 }
