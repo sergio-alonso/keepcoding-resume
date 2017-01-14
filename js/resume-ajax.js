@@ -22,6 +22,33 @@ function roundYear(date) {
   }
   return y;
 }
+//
+// Structure JSON experience data into HTML elements
+//
+var loadExperience = function (data) {
+  var timelineData = [];
+  var sliderItems = $('<ul/>');
+  $.each(data, function (i, item) {
+    var start = roundYear(new Date(item.startDate));
+    var end = roundYear(new Date(item.endDate));
+    if (!end) {
+      end = new Date().getFullYear();
+    }
+    var experience = $('<li/>', {
+      html: start + "-" + end + " " + item.position + " <a href='http://" + item.website + "' target='_blank'>" + item.company +
+        "</a><br/>" +
+        item
+        .summary
+    });
+    sliderItems.prepend(experience);
+    timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
+  });
+  var slider = $('<div/>', { class: "slider-content", html: sliderItems });
+  $("#experience .slider").append(slider);
+  contentSlider.init();
+  var tl = new timeline("timeline", timelineData);
+  tl.draw();
+};
 $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
@@ -39,30 +66,7 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  $.getJSON(urlWork, function (data) {
-    var timelineData = [];
-    var sliderItems = $('<ul/>');
-    $.each(data, function (i, item) {
-      var start = roundYear(new Date(item.startDate));
-      var end = roundYear(new Date(item.endDate));
-      if (!end) {
-        end = new Date().getFullYear();
-      }
-      var experience = $('<li/>', {
-        html: start + "-" + end + " " + item.position + " <a href='http://" + item.website + "' target='_blank'>" + item.company +
-          "</a><br/>" +
-          item
-          .summary
-      });
-      sliderItems.prepend(experience);
-      timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
-    });
-    var slider = $('<div/>', { class: "slider-content", html: sliderItems });
-    $("#experience .slider").append(slider);
-    contentSlider.init();
-    var tl = new timeline("timeline", timelineData);
-    tl.draw();
-  });
+  $.getJSON(urlWork, loadExperience);
   //$(window).resize(function () {
   //tl.redraw();
   //});
