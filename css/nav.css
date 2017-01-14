@@ -4,6 +4,7 @@ body nav {
   top: 6em;
   right: 4em;
   z-index: 3;
+  transition: top 1s;
 }
 
 body nav ul {
