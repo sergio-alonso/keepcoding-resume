@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  align-items: center;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 250px;
+  margin: 1%;
+}
+
+textarea {
+  height: 200px;
+  vertical-align: top;
+}

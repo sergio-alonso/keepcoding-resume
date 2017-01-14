@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="css/content-slider.css" />
   <link rel="stylesheet" type="text/css" href="css/d3.timeline.event-horizon.css" />
   <link rel="stylesheet" type="text/css" href="css/resume-skills.css" />
+  <link rel="stylesheet" type="text/css" href="css/resume-hire-me.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/resume-ajax.js"></script>
@@ -27,6 +28,8 @@
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="js/d3.timeline.event-horizon.min.js"></script>
   <script src="js/resume-skills.js"></script>
+  <script src="js/resume-hire-me.js"></script>
+  <script src="js/word-counter.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/Person">
@@ -70,15 +73,22 @@
     </section>
     <section id="hire-me" class="grid panel">
       <header>
-        <h2>Hire me!</h2>
+        <!-- <h2>Hire me!</h2> -->
       </header>
       <form>
-        <input type="text" name="name" placeholder="Full Name" />
-        <input type="textarea" name="project" placeholder="Brief project description" />
-        <input type="text" name="email" placeholder="name@example.com" />
-        <select>
+
+        <input type="text" name="name" placeholder="Full Name" required autofocus />
+        <input type="email" name="email" placeholder="name@example.com" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+            required />
+        <input type="tel" name="phone" placeholder="+34123456789" pattern="[\+\d{2}]?\d{1,13}" />
+        <textarea name="project" placeholder="Brief project description"></textarea>
+        <script type="text/javascript">
+          $("textarea").textareaCounter({ limit: 150 });
+
+        </script>
+        <select name="from">
+	  <option value="" selected>How did you know me?</option>
 	  <option value="linkedin">Linkedin</option>
-	  <option value="google">Google</option>
 	  <option value="previous">Previous Work</option>
 	  <option value="reference">Shared Contact</option>
 	  <option value="others">Other way</option>
