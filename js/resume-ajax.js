@@ -23,9 +23,9 @@ function roundYear(date) {
   return y;
 }
 //
-// Structure JSON experience data into HTML elements
+// Structure JSON work data into HTML elements
 //
-var loadExperience = function (data) {
+var loadWork = function (data) {
   var timelineData = [];
   var sliderItems = $('<ul/>');
   $.each(data, function (i, item) {
@@ -34,17 +34,17 @@ var loadExperience = function (data) {
     if (!end) {
       end = new Date().getFullYear();
     }
-    var experience = $('<li/>', {
+    var work = $('<li/>', {
       html: start + "-" + end + " " + item.position + " <a href='http://" + item.website + "' target='_blank'>" + item.company +
         "</a><br/>" +
         item
         .summary
     });
-    sliderItems.prepend(experience);
+    sliderItems.prepend(work);
     timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
   });
   var slider = $('<div/>', { class: "slider-content", html: sliderItems });
-  $("#experience .slider").append(slider);
+  $("#work .slider").append(slider);
   contentSlider.init();
   var tl = new timeline("timeline", timelineData);
   tl.draw();
@@ -69,7 +69,7 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  $.getJSON(urlWork, loadExperience);
+  $.getJSON(urlWork, loadWork);
   //$(window).resize(function () {
   //tl.redraw();
   //});
