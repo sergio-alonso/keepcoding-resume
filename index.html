@@ -75,7 +75,8 @@
       <form>
         <input type="text" name="name" placeholder="Full Name" required />
         <textarea name="project" placeholder="Brief project description"></textarea>
-        <input type="text" name="email" placeholder="name@example.com" />
+        <input type="email" name="email" placeholder="name@example.com" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        />
         <select>
 	  <option value="linkedin">Linkedin</option>
 	  <option value="previous">Previous Work</option>
