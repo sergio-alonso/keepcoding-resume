@@ -30,7 +30,8 @@ $(document).ready(function () {
     var slider_items = $('<ul/>');
     $.each(data, function (i, item) {
       var experience = $('<li/>', {
-        html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "'>" + item.company + "</a><br/>" +
+        html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "' target='_blank'>" + item.company +
+          "</a><br/>" +
           item
           .summary
       });
