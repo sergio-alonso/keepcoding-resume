@@ -49,6 +49,9 @@ var loadExperience = function (data) {
   var tl = new timeline("timeline", timelineData);
   tl.draw();
 };
+//
+// Get data forn JSON server
+//
 $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
