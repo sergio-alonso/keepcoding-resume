@@ -73,5 +73,5 @@ $(document).ready(function () {
   //$(window).resize(function () {
   //tl.redraw();
   //});
-  SkillsMap.draw("#skills-map", "resume-skills.json");
+  SkillsHeatmap.draw("#skills-heatmap", "resume-skills.json");
 });
