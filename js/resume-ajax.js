@@ -14,8 +14,16 @@ $(document).ready(function () {
     $("header h1").html(data.basics.name);
     $("#what-i-do h2").html(data.basics.label);
     $("#what-i-do h3").html(data.basics.summary);
-    $("footer .email").html(data.basics.email);
-    $("footer .website").html(data.basics.website);
+    email = $('<a/>', {
+      href: "mailto:" + data.basics.email,
+      html: data.basics.email
+    });
+    $("footer .email").html(email);
+    website = $('<a/>', {
+      href: "http://" + data.basics.website,
+      html: data.basics.website
+    });
+    $("footer .website").html(website);
   });
   $.getJSON(url_work, function (data) {
     var timelineData = [];
