@@ -8,43 +8,6 @@
 //
 var url = "http://localhost:3000/db";
 //
-// Round to nearest year
-//
-// 1980-02 -> 1980
-// 1980-08 -> 1981
-//
-function roundYear(date) {
-  y = date.getFullYear();
-  m = date.getMonth();
-  if (6 < m) {
-    y++;
-  }
-  return y;
-}
-//
-// Structure JSON work data into HTML elements
-//
-var loadWork = function (data) {
-  var sliderItems = $('<ul/>');
-  $.each(data, function (i, item) {
-    var start = roundYear(new Date(item.startDate));
-    var end = roundYear(new Date(item.endDate));
-    if (!end) {
-      end = new Date().getFullYear();
-    }
-    var work = $('<li/>', {
-      html: start + "-" + end + " " + item.position + " <a href='http://" + item.website + "' target='_blank'>" + item.company +
-        "</a><br/>" +
-        item
-        .summary
-    });
-    sliderItems.prepend(work);
-  });
-  var slider = $('<div/>', { class: "slider-content", html: sliderItems });
-  $("#work .slider").append(slider);
-  contentSlider.init();
-};
-//
 // Get data from JSON server
 //
 $(document).ready(function () {
@@ -64,7 +27,7 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  //$.getJSON(urlWork, loadWork);
+  WorkSlider("work-slider").load("http://localhost:3000/work");
   WorkTimeline("work-timeline").load("http://localhost:3000/work");
   SkillsHeatmap.draw("#skills-heatmap", "resume-skills.json");
 });
