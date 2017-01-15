@@ -25,12 +25,11 @@
         if (text === "") {
           wordcount = 0;
         } else {
-          wordcount = $.trim(text).split(" ").length;
+          wordcount = $.trim(text).match(/[^ ]+/g).length;
         }
         if (wordcount > options.limit) {
           $("#counter-text").html('<span style="color: #DD0000;">0 words left</span>');
-          limited = $.trim(text).split(" ", options.limit);
-          limited = limited.join(" ");
+          limited = $.trim(text).substring(0, $.trim(text).length - 2);
           $(this).val(limited);
         } else {
           $("#counter-text").html((options.limit - wordcount) + ' words left');
