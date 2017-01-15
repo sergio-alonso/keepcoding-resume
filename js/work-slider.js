@@ -18,19 +18,24 @@ function WorkSlider(id) {
     var position = $('<div/>', {
       text: item.position
     });
-    var company = $('<a/>', {
+    var company = $('<div />').append($('<a/>', {
       href: item.website,
       target: "_blank",
       text: item.company
-    });
+    }));
     var summary = $('<div/>', {
       text: item.summary
     });
-    var highlights = $('<ul/>');
+    var highlightsContainer = $('<div />');
+    var highlights = $('<ul/>').appendTo(highlightsContainer);
     $.each(item.highlights, function (i, item) {
       $('<li/>', { text: item }).appendTo(highlights);
     });
-    var work = $('<li/>', { class: "slider-item" }).append(date).append(position).append(company).append(summary).append(highlights);
+    var header = $('<div />', { class: 'slider-item-header' }).append(date).append(position).append(company);
+    var content = $('<div />', { class: 'slider-item-content' }).append(summary).append(highlightsContainer);
+    var work = $('<li/>', {
+      class: "slider-item"
+    }).append(header).append(content);
     sliderItems.prepend(work);
   };
   var loadData = function (data) {

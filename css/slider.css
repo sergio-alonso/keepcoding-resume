@@ -18,6 +18,32 @@
 
 .slider .slider-content .slider-items .slider-item {
   float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider .slider-content .slider-items .slider-item .slider-item-header {
+  display: flex;
+}
+
+.slider .slider-content .slider-items .slider-item .slider-item-header div {
+  padding: 1em;
+}
+
+.slider .slider-content .slider-items .slider-item .slider-item-content {
+  display: flex;
+}
+
+.slider .slider-content .slider-items .slider-item .slider-item-content div {
+  padding: 2em;
+}
+
+.slider .slider-content .slider-items .slider-item .slider-item-content div ul {
+  list-style: square;
+}
+
+.slider .slider-content .slider-items .slider-item .slider-item-content div ul li {
+  padding-bottom: 1em;
 }
 
 .slider button {
