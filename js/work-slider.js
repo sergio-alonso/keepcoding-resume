@@ -4,20 +4,6 @@
 function WorkSlider(id) {
   var sliderItems = $('<ul/>');
   //
-  // Round to nearest year
-  //
-  // 1980-02 -> 1980
-  // 1980-08 -> 1981
-  //
-  function roundYear(date) {
-    y = date.getFullYear();
-    m = date.getMonth();
-    if (6 < m) {
-      y++;
-    }
-    return y;
-  }
-  //
   // Structure JSON work data into HTML elements
   //
   var loadItems = function (i, item) {

@@ -31,3 +31,19 @@ $(document).ready(function () {
   WorkTimeline("work-timeline").load("http://localhost:3000/work");
   SkillsHeatmap.draw("#skills-heatmap", "resume-skills.json");
 });
+//
+// Helper functions to handle dates and times
+//
+// Given a date, round to nearest year
+//
+// 1980-04-27 -> 1980
+// 1980-08-01 -> 1981
+//
+function roundYear(date) {
+  y = date.getFullYear();
+  m = date.getMonth();
+  if (6 < m) {
+    y++;
+  }
+  return y;
+}

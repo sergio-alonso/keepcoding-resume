@@ -3,15 +3,6 @@
 //
 function WorkTimeline(id) {
   var timelineData = [];
-
-  function roundYear(date) {
-    y = date.getFullYear();
-    m = date.getMonth();
-    if (6 < m) {
-      y++;
-    }
-    return y;
-  }
   var loadData = function (data) {
     $.each(data, function (i, item) {
       var start = roundYear(new Date(item.startDate));
