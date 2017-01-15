@@ -7,75 +7,75 @@
     "summary": "I will take care of your technological needs in a geek driven world. Always seeking for new knowledge to do the right things in the right way at the right time. My main goal is help you to design and build awesome solutions working together."
   },
   "work": [{
-    "company": "Altran",
+    "company": "Altran Spain",
     "position": "Software Engineer",
     "website": "www.altran.es",
     "startDate": "2010-04-01",
-    "summary": "Design software for the DPI (Deep Packet Inspection) technology provided by the Ericsson's Packet Core that is integrated by means of the SASN (Service Aware Support Node). As an Ericsson Research and Development software engineer team member I'm improving upon the existing complex legacy system within the Ericsson SACC (Service Aware Charging and Control) solution that identifies traffic carried over the network.",
+    "summary": "Design software for the DPI technology provided by the Ericsson's Packet Core that is integrated by means of the Service Aware Support Node. As an R&D software engineer team member I'm improving upon the existing complex legacy system that identifies traffic carried over the network within the Ericsson Service Aware Charging and Control solution.",
     "highlights": [
-      "Implement features to evolve AAA protocols (Radius, Diameter) over 3GPP Packet Core interfaces (Gx, Gy, Gz, Rx).",
-      "Expand node capabilities with propietary protocols such EBM (Event Based Monitoring).",
-      "Catch up on the latest industry trends deploying SASN on Ericsson SSR (Smart Service Route) and SDN (Software Defined Network) service functions."
+      "Implement features to evolve AAA protocols over 3GPP Packet Core interfaces.",
+      "Expand node capabilities with proprietary protocols such EBM.",
+      "Catch up on the latest industry trends deploying over SSR and as SDN service function."
     ]
   }, {
-    "company": "Altran",
+    "company": "Altran Spain",
     "position": "Team Leader",
     "website": "www.altran.es",
     "startDate": "2013-05-01",
     "endDate": "2016-10-01",
-    "summary": "Altran service delivery Team Leader",
+    "summary": "The organizational structure and my years of experience within the company gave me the opportunity to become an Altran Operations Team Leader. Taking care of a 15 consultants distributed team, giving support to Altran Service Delivery Managers and being the reference point with the client.",
     "highlights": [
       "Identify key risk factors that affect individual and team performance.",
       "Help everyone to reach a higher level of professional excellence.",
       "Inspire action and contribute to build a structure to achieve our goals."
     ]
   }, {
-    "company": "Altran",
+    "company": "Altran Spain",
     "position": "Scrum Master",
     "website": "www.altran.es",
     "startDate": "2014-01-01",
     "endDate": "2015-01-01",
-    "summary": "Ericsson R&D Agile Team Leader.",
+    "summary": "As an Ericsson Cross Functional Team Leader, I was in charge of ensuring that all project participants followed the Agile values and principles. Removing impediments that we had on our way to achieve our commitments. I had to protect and isolate the team from external disruptions to maintain our productivity.",
     "highlights": [
-      "Ensure that all project participants follow the Agile values and principles",
-      "Remove impediments that the team has on its way to achieving our commitment",
-      "Protect and isolate the team from external disruptions to maintain our productivity"
+      "Drive the Agile transformation of an Ericsson R&D software engineering team.",
+      "Obtain knowledge and experience that are difficult to achieve otherwise.",
+      "Get the ability to lead in a wide range of circumstances."
     ]
   }, {
-    "company": "Prosolia Solar Energy",
+    "company": "Projectes Solars de la Mediterranea",
     "position": "Telecommunications Engineer",
     "website": "www.prosolia.es",
     "startDate": "2008-01-01",
     "endDate": "2009-12-01",
-    "summary": "",
+    "summary": "Design of a photovoltaics monitoring system for the maintenance company of Prosolia.",
     "highlights": [
-      "",
-      "",
-      ""
+      "Deploy an end to end solution for solar power generation monitoring.",
+      "Implement standard protocols for energy metering.",
+      "Reverse engineering industry provider protocols."
     ]
   }, {
-    "company": "Capgemini",
+    "company": "Capgemini Spain",
     "position": "Full Stack Developer",
     "website": "www.capgemini.es",
     "startDate": "2007-01-01",
     "endDate": "2008-01-01",
-    "summary": "",
+    "summary": "Implement services for the Customer Relationship Management platform.",
     "highlights": [
-      "",
-      "",
-      ""
+      "Develop services for Seguros SantaLucia S.A. CRM platform.",
+      "Frontend development.",
+      "Backend development."
     ]
   }, {
-    "company": "Capgemini",
+    "company": "Capgemini Spain",
     "position": "Business Process Outsourcer",
     "website": "www.capgemini.es",
     "startDate": "2006-06-01",
     "endDate": "2007-01-01",
-    "summary": "",
+    "summary": "Outsourcing and automation of the billing department processes.",
     "highlights": [
-      "",
-      "",
-      ""
+      "Outsource services for Telefonica Moviles S.A.",
+      "Automation of billing control process.",
+      "Train staff in the new way of proceeding."
     ]
   }, {
     "company": "DCOM EPSA UPV",
@@ -83,11 +83,11 @@
     "website": "www.dcom.upv.es",
     "startDate": "2002-01-01",
     "endDate": "2006-01-01",
-    "summary": "",
+    "summary": "Administration of computer networks in the laboratories of the DCOM.",
     "highlights": [
-      "",
-      "",
-      ""
+      "Operating systems maintenance.",
+      "Network devices maintenance.",
+      "Research for new uses of resources."
     ]
   }],
   "skills": [{
