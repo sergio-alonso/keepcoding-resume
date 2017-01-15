@@ -16,18 +16,21 @@
   <link rel="stylesheet" type="text/css" href="css/grid.css" />
   <link rel="stylesheet" type="text/css" href="css/nav.css" />
   <link rel="stylesheet" type="text/css" href="css/page-transitions.css" />
-  <link rel="stylesheet" type="text/css" href="css/content-slider.css" />
+  <link rel="stylesheet" type="text/css" href="css/slider.css" />
   <link rel="stylesheet" type="text/css" href="css/d3.timeline.event-horizon.css" />
   <link rel="stylesheet" type="text/css" href="css/resume-skills.css" />
   <link rel="stylesheet" type="text/css" href="css/resume-hire-me.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/resume-ajax.js"></script>
-  <script src="js/page-transitions.js"></script>
-  <script src="js/content-slider.js"></script>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="js/d3.timeline.event-horizon.min.js"></script>
-  <script src="js/resume-skills.js"></script>
+
+  <script src="js/resume-ajax.js"></script>
+  <script src="js/page-transitions.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/work-timeline.js"></script>
+  <script src="js/work-slider.js"></script>
+  <script src="js/skills-heatmap.js"></script>
   <script src="js/resume-hire-me.js"></script>
   <script src="js/word-counter.js"></script>
   <script src="js/nav.js"></script>
@@ -43,7 +46,7 @@
   <nav>
     <ul>
       <li><a href="#">What I do</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Work</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#hire-me">Hire me!</a></li>
     </ul>
@@ -59,20 +62,17 @@
         <h3 class="column-4"></h3>
       </div>
     </section>
-    <section id="experience" class="grid panel">
-      <header>
-        <!-- <h2>Experience</h2> -->
-      </header>
-      <div id="timeline"></div>
-      <div class="slider"></div>
+    <section id="work" class="panel">
+      <div id="work-timeline"></div>
+      <div id="work-slider" class="slider"></div>
     </section>
-    <section id="skills" class="grid panel">
+    <section id="skills" class="panel">
       <header>
         <!-- <h2>Skills</h2> -->
       </header>
-      <div id="skills-map"></div>
+      <div id="skills-heatmap"></div>
     </section>
-    <section id="hire-me" class="grid panel">
+    <section id="hire-me" class="panel">
       <header>
         <!-- <h2>Hire me!</h2> -->
       </header>

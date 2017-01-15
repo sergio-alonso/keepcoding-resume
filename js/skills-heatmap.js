@@ -1,10 +1,10 @@
 //
-// Resume Skills Map
+// Resume Skills Heatmap
 //
 // http://callbackhell.com/
 // https://toddmotto.com/mastering-the-module-pattern/
 //
-var SkillsMap = (function () {
+var SkillsHeatmap = (function () {
   var startYear = 2001;
   var endYear = 2018;
   var width = 600;

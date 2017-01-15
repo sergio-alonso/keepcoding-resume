@@ -7,7 +7,9 @@
 // The functions and methods therein allow us to load data from the server without a browser page refresh.
 //
 var url = "http://localhost:3000/db";
-var url_work = "http://localhost:3000/work";
+//
+// Get data from JSON server
+//
 $(document).ready(function () {
   $.getJSON(url, function (data) {
     $("title").html(data.basics.name);
@@ -25,31 +27,23 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  $.getJSON(url_work, function (data) {
-    var timelineData = [];
-    var slider_items = $('<ul/>');
-    $.each(data, function (i, item) {
-      var experience = $('<li/>', {
-        html: item.startDate + " " + item.position + " at <a href='http://" + item.website + "'>" + item.company + "</a><br/>" +
-          item
-          .summary
-      });
-      slider_items.prepend(experience);
-      var start = new Date(item.startDate).getFullYear();
-      var end = new Date(item.endDate).getFullYear();
-      if (!end) {
-        end = new Date().getFullYear();
-      }
-      timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
-    });
-    var slider = $('<div/>', { class: "slider-content", html: slider_items });
-    $("#experience .slider").append(slider);
-    contentSlider.init();
-    var tl = new timeline("timeline", timelineData);
-    tl.draw();
-  });
-  //$(window).resize(function () {
-  //tl.redraw();
-  //});
-  SkillsMap.draw("#skills-map", "resume-skills.json");
+  WorkSlider("work-slider").load("http://localhost:3000/work");
+  WorkTimeline("work-timeline").load("http://localhost:3000/work");
+  SkillsHeatmap.draw("#skills-heatmap", "resume-skills.json");
 });
+//
+// Helper functions to handle dates and times
+//
+// Given a date, round to nearest year
+//
+// 1980-04-27 -> 1980
+// 1980-08-01 -> 1981
+//
+function roundYear(date) {
+  y = date.getFullYear();
+  m = date.getMonth();
+  if (6 < m) {
+    y++;
+  }
+  return y;
+}
