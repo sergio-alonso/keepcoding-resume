@@ -18,11 +18,11 @@ var contentSlider = {
   },
   prev: function () {
     if (0 < this.slider.find('.slider-item.active').prev().length) {
-      this.slider.find('.slider-items.active').removeClass('active').prev().addClass('active');
+      this.slider.find('.slider-item.active').removeClass('active').prev().addClass('active');
       this.current = "+=" + this.width;
     } else {
       this.current = "-=" + (this.width * (this.length - 1));
-      this.slider.find('.slider-items.active').removeClass('active').parent().find('.slider-item:last-child').addClass('active');
+      this.slider.find('.slider-item.active').removeClass('active').parent().find('.slider-item:last-child').addClass('active');
     }
     this.slider.find('.slider-items').animate({
       left: this.current
