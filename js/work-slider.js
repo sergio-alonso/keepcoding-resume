@@ -19,7 +19,7 @@ function WorkSlider(id) {
       text: item.position
     });
     var company = $('<div />').append($('<a/>', {
-      href: item.website,
+      href: "http://" + item.website,
       target: "_blank",
       text: item.company
     }));
