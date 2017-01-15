@@ -4,7 +4,7 @@
 // http://callbackhell.com/
 // https://toddmotto.com/mastering-the-module-pattern/
 //
-var SkillsHeatmap = (function () {
+function SkillsHeatmap(id) {
   var startYear = 2001;
   var endYear = 2018;
   var width = 600;
@@ -46,7 +46,7 @@ var SkillsHeatmap = (function () {
         .text(data[i]['name']);
     }
   };
-  var draw = function (id, json) {
+  var load = function (json) {
     svg = d3.select(id).append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -55,6 +55,6 @@ var SkillsHeatmap = (function () {
     d3.json(json, _handleData);
   };
   return {
-    draw: draw
+    load: load
   };
-})();
+}

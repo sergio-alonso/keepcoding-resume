@@ -44,7 +44,7 @@ function WorkSlider(id) {
       class: "slider-content",
       html: sliderItems
     });
-    $("#" + id).append(slider);
+    $(id).append(slider);
     contentSlider.init();
   };
   var load = function (jsonUrl) {

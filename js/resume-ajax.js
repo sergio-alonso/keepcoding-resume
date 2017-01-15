@@ -27,9 +27,9 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  WorkSlider("work-slider").load("http://localhost:3000/work");
-  WorkTimeline("work-timeline").load("http://localhost:3000/work");
-  SkillsHeatmap.draw("#skills-heatmap", "resume-skills.json");
+  WorkSlider("#work-slider").load("http://localhost:3000/work");
+  WorkTimeline("#work-timeline").load("http://localhost:3000/work");
+  SkillsHeatmap("#skills-heatmap").load("resume-skills.json");
 });
 //
 // Helper functions to handle dates and times

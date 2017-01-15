@@ -12,6 +12,7 @@ function WorkTimeline(id) {
       }
       timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
     });
+    id = id.replace("#", "");
     new timeline(id, timelineData).draw();
   };
   var load = function (jsonUrl) {
