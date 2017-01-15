@@ -7,7 +7,6 @@
 // The functions and methods therein allow us to load data from the server without a browser page refresh.
 //
 var url = "http://localhost:3000/db";
-var urlWork = "http://localhost:3000/work";
 //
 // Round to nearest year
 //
@@ -26,7 +25,6 @@ function roundYear(date) {
 // Structure JSON work data into HTML elements
 //
 var loadWork = function (data) {
-  var timelineData = [];
   var sliderItems = $('<ul/>');
   $.each(data, function (i, item) {
     var start = roundYear(new Date(item.startDate));
@@ -41,16 +39,13 @@ var loadWork = function (data) {
         .summary
     });
     sliderItems.prepend(work);
-    timelineData.push(JSON.parse('{ "name": "' + item.position + '", "start": ' + start + ', "end": ' + end + ' }'));
   });
   var slider = $('<div/>', { class: "slider-content", html: sliderItems });
   $("#work .slider").append(slider);
   contentSlider.init();
-  var tl = new timeline("timeline", timelineData);
-  tl.draw();
 };
 //
-// Get data forn JSON server
+// Get data from JSON server
 //
 $(document).ready(function () {
   $.getJSON(url, function (data) {
@@ -69,9 +64,7 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  $.getJSON(urlWork, loadWork);
-  //$(window).resize(function () {
-  //tl.redraw();
-  //});
+  //$.getJSON(urlWork, loadWork);
+  WorkTimeline("work-timeline").load("http://localhost:3000/work");
   SkillsHeatmap.draw("#skills-heatmap", "resume-skills.json");
 });
