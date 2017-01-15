@@ -2,7 +2,7 @@
 // Resume work slider
 //
 function WorkSlider(id) {
-  var sliderItems = $('<ul/>');
+  var sliderItems = $('<ul/>', { class: "slider-items" });
   //
   // Structure JSON work data into HTML elements
   //
@@ -12,20 +12,33 @@ function WorkSlider(id) {
     if (!end) {
       end = new Date().getFullYear();
     }
-    var work = $('<li/>', {
-      html: start + "-" + end + " " +
-        item.position +
-        " <a href='http://" + item.website + "' target='_blank'>" +
-        item.company +
-        "</a>" +
-        "<br / > " +
-        item.summary
+    var date = $('<div/>', {
+      text: start + "-" + end
     });
+    var position = $('<div/>', {
+      text: item.position
+    });
+    var company = $('<a/>', {
+      href: item.website,
+      target: "_blank",
+      text: item.company
+    });
+    var summary = $('<div/>', {
+      text: item.summary
+    });
+    var highlights = $('<ul/>');
+    $.each(item.highlights, function (i, item) {
+      $('<li/>', { text: item }).appendTo(highlights);
+    });
+    var work = $('<li/>', { class: "slider-item" }).append(date).append(position).append(company).append(summary).append(highlights);
     sliderItems.prepend(work);
   };
   var loadData = function (data) {
     $.each(data, loadItems);
-    var slider = $('<div/>', { class: "slider-content", html: sliderItems });
+    var slider = $('<div/>', {
+      class: "slider-content",
+      html: sliderItems
+    });
     $("#" + id).append(slider);
     contentSlider.init();
   };

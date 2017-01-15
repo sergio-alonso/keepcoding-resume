@@ -3,8 +3,8 @@
 */
 
 .slider {
-  width: 75%;
-  margin: 0 auto;
+  /*width: 75%;*/
+  /*  margin: 0 auto;*/
 }
 
 .slider .slider-content {
@@ -12,11 +12,11 @@
   width: 100%;
 }
 
-.slider .slider-content ul {
+.slider .slider-content .slider-items {
   position: relative;
 }
 
-.slider .slider-content ul li {
+.slider .slider-content .slider-items .slider-item {
   float: left;
 }
 
