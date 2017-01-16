@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "json-server": "node node_modules/json-server/bin/index.js --watch resume.json",
-    "http-server": "node node_modules/http-server/bin/http-server -p 3001",
-    "server": "npm run json-server | npm run http-server",
-    "start": "npm run server"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +21,6 @@
   },
   "homepage": "https://github.com/sergio-alonso/keepcoding-resume#readme",
   "dependencies": {
-    "http-server": "^0.9.0",
-    "json-server": "^0.9.4",
-    "supervisord": "^0.1.0"
+    "json-mock": "^0.1.0"
   }
 }

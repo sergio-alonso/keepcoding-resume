@@ -6,7 +6,7 @@
 // The jQuery library has a full suite of Ajax capabilities.
 // The functions and methods therein allow us to load data from the server without a browser page refresh.
 //
-var url = "http://localhost:3000/db";
+var url = "http://" + location.host + "/db";
 //
 // Get data from JSON server
 //
@@ -27,9 +27,9 @@ $(document).ready(function () {
     });
     $("footer .website").html(website);
   });
-  WorkSlider("#work-slider").load("http://localhost:3000/work");
-  WorkTimeline("#work-timeline").load("http://localhost:3000/work");
-  SkillsHeatmap("#skills-heatmap").load("resume-skills.json");
+  WorkSlider("#work-slider").load("http://" + location.host + "/work");
+  WorkTimeline("#work-timeline").load("http://" + location.host + "/work");
+  SkillsHeatmap("#skills-heatmap").load("../resume-skills.json");
 });
 //
 // Helper functions to handle dates and times
