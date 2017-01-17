@@ -41,11 +41,11 @@ $(document).ready(function () {
       e.preventDefault();
       jQuery.ajax({
         type: "POST",
-        url: form.attr("action"),
+        url: "http://" + location.host + "/message",
         dataType: 'json',
         data: form.serialize(), // serializes the form's elements.
         success: function (data) {
-          alert(data); // show response from the php script. (use the developer toolbar console, firefox firebug or chrome inspector console)
+          alert("Thanks, I'll be in touch soon.");
         }
       });
     }
