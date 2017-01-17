@@ -99,25 +99,6 @@
         <input type="submit" value="Hire me!" />
       </form>
 
-      <script>
-        jQuery(document).submit(function (e) {
-          var form = jQuery(e.target);
-          if (form.is(".hire-me-form")) { // check if this is the form that you want (delete this check to apply this to all forms)
-            e.preventDefault();
-            jQuery.ajax({
-              type: "POST",
-              url: form.attr("action"),
-              dataType: 'json',
-              data: form.serialize(), // serializes the form's elements.
-              success: function (data) {
-                alert(data); // show response from the php script. (use the developer toolbar console, firefox firebug or chrome inspector console)
-              }
-            });
-          }
-        });
-
-      </script>
-
     </section>
   </main>
 

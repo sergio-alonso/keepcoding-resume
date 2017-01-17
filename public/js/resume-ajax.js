@@ -32,6 +32,26 @@ $(document).ready(function () {
   SkillsHeatmap("#skills-heatmap").load("../resume-skills.json");
 });
 //
+// Post data to JSON server
+//
+$(document).ready(function () {
+  jQuery(document).submit(function (e) {
+    var form = jQuery(e.target);
+    if (form.is(".hire-me-form")) { // check if this is the form that you want (delete this check to apply this to all forms)
+      e.preventDefault();
+      jQuery.ajax({
+        type: "POST",
+        url: form.attr("action"),
+        dataType: 'json',
+        data: form.serialize(), // serializes the form's elements.
+        success: function (data) {
+          alert(data); // show response from the php script. (use the developer toolbar console, firefox firebug or chrome inspector console)
+        }
+      });
+    }
+  });
+});
+//
 // Helper functions to handle dates and times
 //
 // Given a date, round to nearest year
