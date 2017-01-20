@@ -47,3 +47,4 @@ flycheck_*.el
 # npm directory
 node_modules/
 requirements.org
+*.tar
