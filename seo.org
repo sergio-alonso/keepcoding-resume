@@ -5,3 +5,4 @@ Full Stack Developer
 * Key Word Research
 
 - [X] Google Adwords
+- [X] Google Suggest
