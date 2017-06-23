@@ -7,3 +7,4 @@ Full Stack Developer
 - [X] Google Adwords
 - [X] Google Suggest
 - [X] Google Releated Searches
+- [X] Google Trends
