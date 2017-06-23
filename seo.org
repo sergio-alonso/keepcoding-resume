@@ -9,3 +9,4 @@ Full Stack Developer
 - [X] Google Releated Searches
 - [X] Google Trends
 - [X] Ubersuggest
+- [ ] Amazon
