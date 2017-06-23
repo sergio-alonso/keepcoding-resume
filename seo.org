@@ -13,3 +13,5 @@ Full Stack Developer
 - [ ] Semrush
 - [ ] Sistrix
 - [X] Keywordtool
+
+* Information Architecture
