@@ -12,3 +12,4 @@ Full Stack Developer
 - [ ] Amazon
 - [ ] Semrush
 - [ ] Sistrix
+- [X] Keywordtool
