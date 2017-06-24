@@ -20,7 +20,7 @@ Full Stack Developer
 - [X] Title
 - [X] H1 H2 H3 H4 H5 H6
 - [ ] Description
-- [ ] URL
+- [X] URL
 - [X] In links
 - [ ] Out Links
 - [ ] 300 - 500 words
