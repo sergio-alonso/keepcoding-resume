@@ -28,3 +28,11 @@ Full Stack Developer
 - [ ] Alt image
 - [ ] External resoures
 - [X] Bold
+
+* SEO Elements
+- [ ] Title
+- [ ] Description
+- [ ] Canonical
+- [ ] Open Graph
+- [X] Twitter Cards
+
