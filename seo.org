@@ -19,7 +19,7 @@ Full Stack Developer
 * On Page Optimization
 - [X] Title
 - [X] H1 H2 H3 H4 H5 H6
-- [ ] Description
+- [X] Description
 - [X] URL
 - [X] In links
 - [ ] Out Links
