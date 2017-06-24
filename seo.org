@@ -21,7 +21,7 @@ Full Stack Developer
 - [X] H1 H2 H3 H4 H5 H6
 - [ ] Description
 - [ ] URL
-- [ ] In links
+- [X] In links
 - [ ] Out Links
 - [ ] 300 - 500 words
 - [ ] Key Words Synonims
