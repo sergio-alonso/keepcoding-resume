@@ -33,6 +33,6 @@ Full Stack Developer
 - [ ] Title
 - [ ] Description
 - [ ] Canonical
-- [ ] Open Graph
+- [X] Open Graph
 - [X] Twitter Cards
 
