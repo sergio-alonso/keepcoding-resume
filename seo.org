@@ -27,4 +27,4 @@ Full Stack Developer
 - [ ] Key Words Synonims
 - [ ] Alt image
 - [ ] External resoures
-- [ ] Bold
+- [X] Bold
