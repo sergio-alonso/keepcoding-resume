@@ -15,3 +15,16 @@ Full Stack Developer
 - [X] Keywordtool
 
 * Information Architecture
+
+* On Page Optimization
+- [ ] Title
+- [ ] H1 H2 H3 H4 H5 H6
+- [ ] Description
+- [ ] URL
+- [ ] In links
+- [ ] Out Links
+- [ ] 300 - 500 words
+- [ ] Key Words Synonims
+- [ ] Alt image
+- [ ] External resoures
+- [ ] Bold
