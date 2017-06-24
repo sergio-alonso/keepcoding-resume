@@ -32,7 +32,7 @@ Full Stack Developer
 * SEO Elements
 - [ ] Title
 - [ ] Description
-- [ ] Canonical
+- [X] Canonical
 - [X] Open Graph
 - [X] Twitter Cards
 
